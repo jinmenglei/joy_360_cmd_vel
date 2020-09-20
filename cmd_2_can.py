@@ -24,7 +24,7 @@ class Cmd2can:
         r_turn = r_speed/PERC
 
         l_turn = l_turn*8192/3000 *60
-        r_turn = r_turn * 8192 / 3000 *60
+        r_turn = r_turn * 8192 / 3000 *60 * -1
 
         l_turn_data_byte = int(l_turn).to_bytes(4, byteorder='big', signed=True)
         r_turn_data_byte = int(r_turn).to_bytes(4, byteorder='big', signed=True)
