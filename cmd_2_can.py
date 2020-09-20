@@ -22,7 +22,8 @@ class Cmd2can:
         r_turn = r_speed/PERC
         l_turn = l_turn*8192/3000
         r_turn = r_turn * 8192 / 3000
-        print(hex(l_turn))
+        print(hex(int(l_turn)))
+
 
 
     def start(self):
