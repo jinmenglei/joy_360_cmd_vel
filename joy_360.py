@@ -15,7 +15,7 @@ class Joy360:
         pass
 
     def joy_callback(self,data:Joy):
-        if data.buttons[7] == 1:
+        if data.buttons[11] == 1:
             self.__start = not self.__start
             send_data = Frame()
             send_data.dlc = 8
@@ -28,7 +28,7 @@ class Joy360:
             self.__pub_can_vel.publish(send_data)
 
         # rospy.loginfo(str(data.axes))
-        self.__line_x = data.axes[4]
+        self.__line_x = data.axes[3]
         self.__angle_z = data.axes[0]
 
     def start(self):
