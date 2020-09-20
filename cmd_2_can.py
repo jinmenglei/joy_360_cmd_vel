@@ -31,6 +31,7 @@ class Cmd2can:
         print("------")
         l_turn = l_turn*8192/3000
         r_turn = r_turn * 8192 / 3000
+        print(l_turn)
         print(hex(int(l_turn)))
 
 
