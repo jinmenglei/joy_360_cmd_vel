@@ -16,10 +16,19 @@ class Cmd2can:
     def cmd_callback(self,data:Twist):
         x_speed=data.linear.x
         z_speed=data.angular.z
+        print(x_speed)
+        print(z_speed)
+        print("------")
         l_speed = (x_speed+z_speed)/2
         r_speed = (x_speed-z_speed)/2
+        print(l_speed)
+        print(r_speed)
+        print("------")
         l_turn = l_speed/PERC
         r_turn = r_speed/PERC
+        print(l_turn)
+        print(r_turn)
+        print("------")
         l_turn = l_turn*8192/3000
         r_turn = r_turn * 8192 / 3000
         print(hex(int(l_turn)))
